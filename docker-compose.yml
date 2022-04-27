@@ -47,9 +47,9 @@ services:
     networks:
       - application
   pgweb:
-    container_name: pgweb
-    restart: always
     image: sosedoff/pgweb
+    container_name: ${APP_NAME}_pgweb
+    restart: always
     ports: 
       - "8081:8081"
     depends_on:
